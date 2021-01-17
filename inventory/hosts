@@ -167,6 +167,15 @@ www.openfoodnetwork.org.za
 [za:children]
 za-prod
 
+#-----------------------------------------------------------------------------
+# Poland
+
+[pl-staging]
+staging.openfoodnetwork.org.pl
+
+[pl:childern]
+pl-staging
+
 #------------------------------------------------------------------------------
 # Europe
 
@@ -200,6 +209,7 @@ au-staging
 uk-staging
 fr-staging
 es-staging
+pl-staging
 
 #------------------------------------------------------------------------------
 # All
@@ -219,3 +229,4 @@ be
 za
 br
 co
+pl
