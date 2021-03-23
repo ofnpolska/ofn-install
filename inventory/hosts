@@ -169,11 +169,14 @@ za-prod
 
 #-----------------------------------------------------------------------------
 # Poland
+[pl-prod]
+www.plony.org
 
 [pl-staging]
 staging.openfoodnetwork.org.pl
 
 [pl:children]
+pl-prod
 pl-staging
 
 #------------------------------------------------------------------------------

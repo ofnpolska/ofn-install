@@ -1,12 +1,11 @@
 ---
 
-domain: staging.openfoodnetwork.org.pl
-host_id: pl-staging # country initials (eg uk, es, de) and environment (default is prod)
-rails_env: staging
+domain: www.plony.org
+host_id: pl-prod # country initials (eg uk, es, de) and environment (default is prod)
+rails_env: prod
 
 admin_email: ofnpolska@gmail.com
-
-mail_domain: gmail.com
+mail_domain: www.plony.org
 
 # Optional list of subdomains to register in letsencrypt certificate
 # Defaults to {{ domain }} if list is undefined
@@ -24,9 +23,8 @@ mail_domain: gmail.com
 postgres_listen_addresses:
   - '*'
 #
-custom_hba_entries:
-  - { type: host, database: "{{ openfoodnetwork }}", user: zapier, address: '10.8.0.0/16', auth_method: md5 }
-#  - { type: hostssl, database: "{{ openfoodnetwork }}", user: zapier, address: '10.10.10.253/24', auth_method: md5 }
+#custom_hba_entries:
+#  - { type: hostssl, database: "{{ openfoodnetwork }}", user: zapier, address: '10.10.10.253', auth_method: md5 }
 #  - { type: hostssl, database: "{{ db }}", user: zapier, address: '54.86.9.50/32', auth_method: md5 }
 #custom_application_env_vars: |
 #  OFN_FEATURE_CONNECT_AND_LEARN: "true"
