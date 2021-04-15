@@ -2,7 +2,7 @@
 
 domain: www.plony.org
 host_id: pl-prod # country initials (eg uk, es, de) and environment (default is prod)
-rails_env: prod
+rails_env: staging
 
 admin_email: ofnpolska@gmail.com
 mail_domain: www.plony.org
