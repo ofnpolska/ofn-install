@@ -50,11 +50,11 @@ swapfile_size: false
 
 #----------------------------------------------------------------------
 # Rails variables
-ruby_version: 2.4.4
+ruby_version: 2.5.8
 
 ruby_versions:
-  - version: 2.3.7
   - version: 2.4.4
+  - version: 2.5.8
 
 env:
   RAILS_ENV: "{{ rails_env }}"
@@ -99,6 +99,8 @@ postgresql_global_config_options:
     value: "{{ postgres_listen_addresses | join(',') }}"
   - option: shared_preload_libraries
     value: "{{ postgres_shared_preload_libraries | join(',') }}"
+  - option: wal_sender_timeout
+    value: "300000"
   - option: include_dir
     value: "conf.d"
 
@@ -126,7 +128,6 @@ backup_path: "{{ app_path }}/backups"
 releases_path: "{{ app_path }}/releases-old"
 rollback_path: "{{ app_path }}/rollback"
 rollback_sql_path: "{{ app_path }}/rollback.sql.gz"
-assets_path: "{{ shared_path }}/assets"
 system_path: "{{ shared_path }}/system"
 images_path: "{{ shared_path }}/images"
 files_path: "{{ shared_path }}/files"
